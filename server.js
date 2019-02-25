@@ -51,9 +51,19 @@ app.get('/',(req,res)=> {
   });
 });
 
+app.get('/projects',(req,res)=> {
+  // res.send('<h1>hello!!</h1>');
+  res.render('projects.hbs',{
+    pageTitle:'projects page',
+    welcomeMessage: 'list of projects',
+
+  });
+});
+
 app.get('/about', (req,res)=>{
   res.render('about.hbs',{
     pageTitle:'about page',
+    welcomeMessage: 'projects page bro',
   });
   //res.send('About page');
 })
